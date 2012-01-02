@@ -7,11 +7,11 @@ Group: unknown
 URL: http://code.google.com/p/phantomjs/
 Source0: %{name}-%{version}-source.tar.gz
 Source1: xvfb-run.sh
-BuildRequires: qt47-devel
-BuildRequires: qt47-webkit-devel
+BuildRequires: qt-devel
+BuildRequires: qt-webkit-devel
 BuildRequires: sqlite-devel
-Requires: qt47
-Requires: qt47-webkit
+Requires: qt
+Requires: qt-webkit
 Requires: xorg-x11-xauth
 Requires: xorg-x11-server-Xvfb
 Requires: xorg-x11-server-Xorg
@@ -44,7 +44,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 %setup -q
 
 %build
-qmake-qt47
+qmake-qt4
 make
 
 %install
