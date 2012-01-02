@@ -52,6 +52,7 @@ rm -rf "$RPM_BUILD_ROOT"
 
 mkdir -p "$RPM_BUILD_ROOT/usr/bin"
 cp bin/* "$RPM_BUILD_ROOT/usr/bin"
+rm "$RPM_BUILD_ROOT/usr/bin/Info.plist"
 %if 0%{?el5}
 cp %SOURCE1 "$RPM_BUILD_ROOT/usr/bin/xvfb-run"
 %endif
